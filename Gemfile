@@ -10,16 +10,22 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 
-gem 'spring', group: :development
-
 # Database
 gem 'mongoid'
 
 # Assets 
 gem 'bootstrap-sass', '~> 3.2.0'
 
+group :development do
+	gem 'spring'
+	gem 'better_errors'
+	gem "binding_of_caller"
+end
+
 # Test - Debug
-gem 'rspec-rails'
+group :test do
+	gem 'rspec-rails'
+end
 
 
 # Use ActiveModel has_secure_password
