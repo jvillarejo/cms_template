@@ -16,15 +16,19 @@ gem 'mongoid'
 # Assets 
 gem 'bootstrap-sass', '~> 3.2.0'
 
-group :development do
+# Easy development
+gem 'inherited_resources'
+gem 'kaminari'
+gem 'simple_form'
+
+# Development and Test
+group :development, :test do
 	gem 'spring'
 	gem 'better_errors'
 	gem "binding_of_caller"
-end
 
-# Test - Debug
-group :test do
 	gem 'rspec-rails'
+	gem 'faker'
 end
 
 
