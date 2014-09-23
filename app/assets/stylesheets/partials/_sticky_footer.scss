@@ -6,7 +6,7 @@ html {
 }
 body {
 /* Margin bottom by footer height */
-	margin-bottom: 60px;
+//	margin-bottom: 60px;
 }
 
 .footer {
@@ -21,8 +21,14 @@ body {
 -------------------------------------------------- */
 /* Not required for template or sticky footer method. */
 body > .container {
-	padding: 60px 15px 0;
+	padding: 90px 15px 70px 15px;
 }
+
+body > .container-fluid { 
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
 .container .text-muted {
 	margin: 20px 0;
 }

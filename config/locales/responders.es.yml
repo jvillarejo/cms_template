@@ -1,0 +1,15 @@
+es:
+  flash:
+    actions:
+      create:
+        notice: '%{resource_name} se creó exitosamente'
+        # alert: '%{resource_name} could not be created.'
+      update:
+        notice: '%{resource_name} se actualizó exitosamente'
+        # alert: '%{resource_name} could not be updated.'
+      destroy:
+        notice: '%{resource_name} fue eliminada'
+        alert: '%{resource_name} no pudo ser eliminada'
+    searches:
+      create:
+        notice: ''

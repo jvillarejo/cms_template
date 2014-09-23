@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+ruby '2.0.0'
 
 gem 'rails', '4.1.2'
 
@@ -10,6 +11,9 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 
+# Authentication
+gem 'bcrypt'
+
 # Database
 gem 'mongoid'
 
@@ -19,26 +23,18 @@ gem 'bootstrap-sass', '~> 3.2.0'
 # Easy development
 gem 'responders'
 
+group :development do 
+	gem 'better_errors'
+	gem "binding_of_caller"
+end
+
 # Development and Test
 group :development, :test do
 	gem 'spring'
-	gem 'better_errors'
-	gem "binding_of_caller"
-
 	gem 'rspec-rails'
 	gem 'faker'
 end
 
-
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
-
-# Use unicorn as the app server
-# gem 'unicorn'
-
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
-
-# Use debugger
-# gem 'debugger', group: [:development, :test]
-
+gem 'thin'
+gem 'rails_12factor', group: :production
+gem 'airbrake'

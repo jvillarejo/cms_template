@@ -16,6 +16,4 @@
 
 //= require bootstrap-sprockets
 
-//= require angular/angular.min.js
-
-//= require_tree .
+//= require_tree ./jquery-controls

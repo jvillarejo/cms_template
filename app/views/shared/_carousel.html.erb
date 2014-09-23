@@ -1,0 +1,30 @@
+<% img_class ||= 'full-image' %>
+<div id="pictures-carousel" class="carousel slide" data-ride="carousel">
+  <!-- Wrapper for slides -->
+  <ol class="carousel-indicators">
+    <% pictures.each do |f| %>
+      <li data-target="#pictures-carousel" data-slide-to="<%= pictures.index(f) %>" class="<%= carousel_active_class(f,pictures) %>"></li>
+    <% end %>    
+  </ol>
+
+  <div class="carousel-inner">
+    <% pictures.each do |f| %>
+      <div class="item <%= carousel_active_class(f,pictures) %>">
+        <% if f.respond_to?(:url) %>
+          <%= image_tag(f.url, alt: f.filename, class: "#{img_class}") %>
+        <% else %>
+          <%= image_tag(f, alt: f, class: "#{img_class}") %>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+
+  <%= yield %>
+
+  <a class="left carousel-control" href="#pictures-carousel" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+  </a>
+  <a class="right carousel-control" href="#pictures-carousel" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+  </a>
+</div>

@@ -4,16 +4,21 @@
 $dark: #3B3939;
 $light: #FFFFFF;
 
-$primary: #CC3252;
+$primary: #006189;
 $secondary: #77AADD;
 $third: #68C449;
 
-$complementary: #33CDAD;
+$complementary: #D97300;
+$bright-complementary: #FF8700;
 
 $fourth: #c532ff;
 
-$body-bg: $light;
+$navbar-bg: $light;
+$body-bg: #f8f8f8;
 $text-color: $dark;
+
+$hr-border-color: #d1d1d1;
+
 
 // Global values
 // --------------------------------------------------
@@ -51,10 +56,11 @@ $link-hover-color:      darken($link-color, 15%) !default;
 // Typography
 // -------------------------
 
-$font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif !default;
-$font-family-serif:       Georgia, "Times New Roman", Times, serif !default;
+$font-family-headings: "Oswald", Arial, sans-serif !default;
+$font-family-text: "Helvetica Neue", Arial, sans-serif !default;
 $font-family-monospace:   Monaco, Menlo, Consolas, "Courier New", monospace !default;
-$font-family-base:        $font-family-sans-serif !default;
+
+$font-family-base:        $font-family-text !default;
 
 $font-size-base:          14px !default;
 $font-size-large:         ceil($font-size-base * 1.25) !default; // ~18px
@@ -70,7 +76,7 @@ $font-size-h6:            ceil($font-size-base * 0.85) !default; // ~12px
 $line-height-base:        1.428571429 !default; // 20/14
 $line-height-computed:    floor($font-size-base * $line-height-base) !default; // ~20px
 
-$headings-font-family:    $font-family-base !default;
+$headings-font-family:    $font-family-headings !default;
 $headings-font-weight:    500 !default;
 $headings-line-height:    1.1 !default;
 $headings-color:          inherit !default;
@@ -271,7 +277,7 @@ $navbar-padding-horizontal:        floor($grid-gutter-width / 2) !default;
 $navbar-padding-vertical:          (($navbar-height - $line-height-computed) / 2) !default;
 
 $navbar-default-color:             #777 !default;
-$navbar-default-bg:                #f8f8f8 !default;
+$navbar-default-bg:                $navbar-bg !default;
 $navbar-default-border:            darken($navbar-default-bg, 6.5%) !default;
 
 // Navbar links
@@ -604,7 +610,7 @@ $close-text-shadow:           0 1px 0 #fff !default;
 
 // Code
 // ------------------------
-$code-color:                  #c7254e !default;
+$code-color:                  $primary !default;
 $code-bg:                     #f9f2f4 !default;
 
 $pre-bg:                      #f5f5f5 !default;
@@ -619,13 +625,13 @@ $abbr-border-color:           $gray-light !default;
 $headings-small-color:        $gray-light !default;
 $blockquote-small-color:      $gray-light !default;
 $blockquote-border-color:     $gray-lighter !default;
-$page-header-border-color:    $gray-lighter !default;
+$page-header-border-color:    $hr-border-color !default;
 
 // Miscellaneous
 // -------------------------
 
 // Hr border color
-$hr-border:                   $gray-lighter !default;
+$hr-border:                   $hr-border-color !default;
 
 // Horizontal forms & lists
 $component-offset-horizontal: 180px !default;

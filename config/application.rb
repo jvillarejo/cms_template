@@ -28,6 +28,11 @@ module Webapp
     # config.i18n.default_locale = :de
 
     config.assets.paths << Rails.root.join('vendor', 'assets', 'components')
+    config.autoload_paths += Dir["#{config.root}/lib/**/"]
+    
+    config.i18n.default_locale = :es
+    
+    config.i18n.fallbacks = [:en]
 
     config.generators do |g|
       g.javascript_engine :js

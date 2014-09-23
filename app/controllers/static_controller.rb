@@ -1,4 +1,16 @@
 class StaticController < ApplicationController
-  def landing
+  def home
+  end
+
+  def empresa 
+  end
+
+  def proyectos
+  end
+
+  def contacto
+  end
+
+  class << self
   end
 end

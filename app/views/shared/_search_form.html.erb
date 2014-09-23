@@ -1,0 +1,8 @@
+<div>
+  <%= form_for(Search.new) do |f| %>
+    <div class="inner-addon right-addon">
+      <i class="glyphicon glyphicon-search"></i>
+      <%= f.text_field :key, class: 'form-control', placeholder: 'Buscar...' %>
+    </div>
+  <% end %>
+</div>

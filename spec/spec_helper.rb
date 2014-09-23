@@ -75,4 +75,7 @@ RSpec.configure do |config|
     mocks.verify_partial_doubles = true
   end
 =end
+  config.before(:each) do 
+    TipoDeObra.delete_all
+  end 
 end
